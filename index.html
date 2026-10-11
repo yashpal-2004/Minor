@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Materials Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .landing {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .landing-content {
+    max-width: 800px;
+  }
+
+  .landing-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .landing h1 {
+    font-size: 48px;
+    color: var(--accent);
+    margin: 0 0 16px;
+    font-family: 'Segoe Print', cursive, sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .landing p {
+    font-size: 18px;
+    color: var(--txt-dim);
+    margin: 0 0 40px;
+    line-height: 1.8;
+    font-family: 'Segoe Print', cursive, sans-serif;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .study-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid var(--card-b);
+    border-radius: 16px;
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(120, 81, 169, 0.08);
+    cursor: pointer;
+  }
+
+  .study-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 24px rgba(120, 81, 169, 0.2);
+  }
+
+  .study-card .icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 12px;
+  }
+
+  .study-card h2 {
+    font-size: 22px;
+    color: var(--accent);
+    margin: 12px 0;
+    font-family: 'Segoe Print', cursive, sans-serif;
+  }
+
+  .study-card p {
+    font-size: 14px;
+    color: var(--txt-dim);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .study-card .arrow {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 20px;
+    transition: transform 0.3s;
+  }
+
+  .study-card:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  .status-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 12px;
+    border: 1px solid;
+  }
+
+  .status-ready {
+    background: rgba(95, 168, 87, 0.15);
+    color: var(--good);
+    border-color: var(--good);
+  }
+
+  .status-upcoming {
+    background: rgba(200, 157, 58, 0.15);
+    color: var(--warn);
+    border-color: var(--warn);
+  }
+
+  .footer-link {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px dashed var(--card-b);
+    font-size: 14px;
+    color: var(--txt-dim);
+  }
+
+  .footer-link a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.2s;
+  }
+
+  .footer-link a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .landing h1 {
+      font-size: 36px;
+    }
+
+    .landing p {
+      font-size: 16px;
+    }
+
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="landing">
+  <div class="landing-content">
+    <svg class="landing-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect x="15" y="10" width="70" height="80" rx="8" fill="none" stroke="#7851a9" stroke-width="3"/>
+      <path d="M 25 25 Q 50 35 75 25" stroke="#7851a9" stroke-width="2" fill="none"/>
+      <path d="M 25 40 Q 50 50 75 40" stroke="#7851a9" stroke-width="2" fill="none"/>
+      <path d="M 25 55 Q 50 65 75 55" stroke="#7851a9" stroke-width="2" fill="none"/>
+      <circle cx="50" cy="75" r="5" fill="#d4663f"/>
+    </svg>
+    <h1>Study Hub</h1>
+    <p>Your complete revision materials</p>
+
+    <div class="cards-grid">
+      <a href="CGE Revision.html" class="study-card">
+        <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 20 10 L 80 10 L 85 20 L 85 85 Q 85 90 80 90 L 20 90 Q 15 90 15 85 L 15 20 Z" stroke="#7851a9" stroke-width="3" fill="none"/>
+          <line x1="25" y1="30" x2="75" y2="30" stroke="#7851a9" stroke-width="2"/>
+          <line x1="25" y1="45" x2="75" y2="45" stroke="#7851a9" stroke-width="2"/>
+          <line x1="25" y1="60" x2="75" y2="60" stroke="#7851a9" stroke-width="2"/>
+          <line x1="25" y1="75" x2="65" y2="75" stroke="#7851a9" stroke-width="2"/>
+        </svg>
+        <h2>Complete Notes</h2>
+        <p>All modules (1-5) with frameworks, case studies, and practice questions</p>
+        <div class="status-badge status-ready">✓ Ready to Study</div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="SBG Revision.html" class="study-card">
+        <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 20 10 L 80 10 L 85 20 L 85 85 Q 85 90 80 90 L 20 90 Q 15 90 15 85 L 15 20 Z" stroke="#d4663f" stroke-width="3" fill="none"/>
+          <line x1="25" y1="30" x2="75" y2="30" stroke="#d4663f" stroke-width="2"/>
+          <line x1="25" y1="45" x2="75" y2="45" stroke="#d4663f" stroke-width="2"/>
+          <line x1="25" y1="60" x2="75" y2="60" stroke="#d4663f" stroke-width="2"/>
+          <line x1="25" y1="75" x2="65" y2="75" stroke="#d4663f" stroke-width="2"/>
+        </svg>
+        <h2>SBG Revision</h2>
+        <p>Strategic Business Growth notes and frameworks</p>
+        <div class="status-badge status-ready">✓ Ready to Study</div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="footer-link">
+      <p>Last updated: October 2026 | <a href="#">Back to desktop</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

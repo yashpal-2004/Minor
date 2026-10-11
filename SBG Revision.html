@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SBG Revision — Unit 1 & Unit 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="toc.js" defer></script>
+<style>
+.mcq{background:rgba(255, 255, 255, 0.8);border:2px solid var(--card-b);border-radius:12px;padding:14px 16px;margin-bottom:10px;}
+.mcq p{margin:0 0 8px;font-weight:500;}
+.opt{display:block;width:100%;text-align:left;padding:7px 10px;margin-bottom:5px;background:rgba(255, 255, 255, 0.9);border:2px solid var(--card-b);border-radius:8px;color:var(--txt);cursor:pointer;font-size:13.5px;font-family:inherit;transition:0.2s;}
+.opt:hover{border-color:var(--accent);}
+.opt.correct{background:rgba(95, 168, 87, 0.15);border-color:var(--good);}
+.opt.wrong{background:rgba(199, 79, 95, 0.15);border-color:var(--bad);}
+#score{position:sticky;top:10px;float:right;background:rgba(255, 255, 255, 0.8);border:2px solid var(--accent);border-radius:20px;padding:8px 16px;font-family:'Courier New',monospace;font-size:13px;color:var(--accent);font-weight:700;}
+.pyramid{display:flex;flex-direction:column;align-items:center;gap:3px;margin:10px 0;}
+.pyramid div{padding:6px 0;text-align:center;border-radius:6px;font-size:12.5px;font-weight:600;color:#2d2416;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav id="sidenav">
+  <div class="navhead">Unit 1</div>
+  <a href="#s1">1. Strategy Basics</a>
+  <a href="#s2">2. Policy/Program/Proc</a>
+  <a href="#s3">3-4. Nine Blocks</a>
+  <a href="#s5">5. Ten Principles</a>
+  <a href="#s6">6-9. Three Levels + Model</a>
+  <a href="#s10">10. Scanning/Forecast</a>
+  <a href="#s11">11. Five Forces</a>
+  <a href="#s12">12. SWOT + Industry</a>
+  <a href="#s13">13. Resources/Core Comp/VRIO</a>
+  <a href="#s14">14-15. Value Chain + Cost</a>
+  <a href="#s16">16. Competitive Advantage</a>
+  <a href="#pestle">PESTLE (ref)</a>
+  <a href="#terms">Terms of the Day</a>
+  <a href="#cheat">⚡ U1 Cheat-Sheet</a>
+  <a href="#mcq">U1 MCQ Bank</a>
+  <a href="#num">U1 Numericals</a>
+  <a href="#sa">U1 Short/Long Answer</a>
+  <div class="navhead">Unit 2</div>
+  <a href="#u2-1">1. Intro to Formulation</a>
+  <a href="#u2-2">2. Formulation Process</a>
+  <a href="#u2-3">3. Grand Strategy Alts</a>
+  <a href="#u2-4">4. TOWS Matrix</a>
+  <a href="#u2-5">5. Ansoff Matrix</a>
+  <a href="#u2-6">6. Diversification</a>
+  <a href="#u2-7">7. BCG Matrix</a>
+  <a href="#u2-8">8. GE-McKinsey Matrix</a>
+  <a href="#u2-9">9. Product Life Cycle</a>
+  <a href="#u2-case">Zenith Motors Case</a>
+  <a href="#u2-cheat">⚡ U2 Cheat-Sheet</a>
+  <a href="#u2-mcq">U2 MCQ Bank</a>
+  <a href="#u2-sa">U2 Short/Long Answer</a>
+  <a href="#u2-examcase">🎯 Zenith Exam Practice</a>
+  <a href="#u2-num">U2 Numericals</a>
+</nav>
+<main>
+<div id="score">Score: 0/0</div>
+<h1 class="title">SBG Revision</h1>
+<div class="subtitle">Unit 1 + Unit 2 · Mid-Sem Prep &nbsp;|&nbsp; Units 3–4 land here for End-Sem · 5-min crash read</div>
+<div class="unitdiv" style="font-size:13px;line-height:1.5">📋 Exam pattern: <b>Subjective Q&amp;A only</b> — no diagrams asked, so the MCQ bank below is for quick self-check, not the actual format. Go deep: don't stop at definitions — know frameworks well enough to apply them to a new business situation, and practice writing full, structured, example-backed answers (TOWS-style, Zenith-style).</div>
+<div class="unitdiv">UNIT 1 — Strategic Foundations &amp; Environmental Audit <span style="color:var(--txt-dim);font-weight:500;font-size:12.5px">· Sessions 1–12</span></div>
+
+<section id="s1">
+<h2 class="sec">1 <span class="tag">Strategy Basics</span></h2>
+<div class="card">
+<ul>
+<li><b>Strategy</b> = deliberate direction — plans/policies deciding how resources reach goals.</li>
+<li>Hard work alone ≠ strategy. Strategy = deliberate trade-offs + direction + planned resource use.</li>
+<li><b>Strategic management</b> = Planning + Formulation + Decision-Making + Evaluation → long-term sustainability.</li>
+<li>Chain: <code class="k">Goal → Objective → Strategy → Tactics</code> (what you want → how you get it).</li>
+<li>Applies to any size business (tailor, tuition teacher, juice stall).</li>
+<li class="ex">Ex: Haldiram's — one 1937 Bikaner shop → ₹12,800 Cr empire via deliberate city-by-city factory expansion.</li>
+</ul>
+</div>
+</section>
+
+<section id="s2">
+<h2 class="sec">2 <span class="tag">Policy · Program · Procedure</span></h2>
+<div class="card">
+<table>
+<tr><th></th><th>Policy</th><th>Program</th><th>Procedure</th></tr>
+<tr><td><b>What</b></td><td>Standing guideline/boundary</td><td>Time-bound activity set</td><td>Fixed step-by-step method</td></tr>
+<tr><td><b>Duration</b></td><td>Indefinite</td><td>Start + end</td><td>Repeats identically</td></tr>
+<tr><td><b>Ex</b></td><td>"Only fresh ingredients"</td><td>"Friday Combo Week"</td><td>Wash→steam→plate→serve</td></tr>
+</table>
+<li class="ex">Stanford Prison Experiment (1971, Zimbardo) — no clear policy/procedure → roles spiraled out of control.</li>
+<li>Businesses that skip writing these down fail <b>quietly</b> — right when they try to grow (new hire/2nd branch).</li>
+</ul>
+</div>
+</section>
+
+<section id="s3">
+<h2 class="sec">3–4 <span class="tag">The Nine Building Blocks</span></h2>
+<div class="card">
+<div class="pyramid">
+<div style="background:#7dd3fc;width:60%">Mission — why we exist</div>
+<div style="background:#93e0fc;width:66%">Goal — long-term aim</div>
+<div style="background:#a9ebfc;width:72%">Objectives — specific, now</div>
+<div style="background:#c084fc;width:78%">Policy / Program / Procedure</div>
+<div style="background:#d9b3fd;width:86%">Budget — numbers</div>
+<div style="background:#5eead4;width:94%">Tactic — quick move</div>
+<div style="background:#fbbf24;width:100%;color:#08111f">= Strategy</div>
+</div>
+<ul>
+<li><b>Mission</b>: broad, stable, why business exists. <span class="ex">Amul (1946) — "fair returns for farmers," unchanged since.</span></li>
+<li><b>Goal</b> vs <b>Objective</b>: Goal = long-term aim (semi-broad); Objective = specific & measurable, changes often.</li>
+<li><b>Budget</b>: plan in numbers — forces trade-offs.</li>
+<li><b>Tactic</b>: quick, short-term, in-the-moment move (smaller/faster than a program).</li>
+<li><b>Common mistake</b>: writing a mission but never linking it to objectives/budget, or running tactics that contradict mission.</li>
+</ul>
+</div>
+</section>
+
+<section id="s5">
+<h2 class="sec">5 <span class="tag">Ten Principles of Strategy</span></h2>
+<div class="card">
+<div class="grid2">
+<ul>
+<li>1. About the future</li>
+<li>2. Needs trade-offs</li>
+<li>3. Must fit environment</li>
+<li>4. Must fit capabilities</li>
+<li>5. Aims for lasting advantage</li>
+</ul>
+<ul>
+<li>6. Top sets it, all implement</li>
+<li>7. Always involves risk</li>
+<li>8. Must stay flexible</li>
+<li>9. Only as good as execution</li>
+<li>10. Needs continuous evaluation</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="s6">
+<h2 class="sec">6–9 <span class="tag">Three Levels of Strategy + Strategic Mgmt Model</span></h2>
+<div class="card">
+<table>
+<tr><th>Level</th><th>Question</th><th>Decided by</th><th>Ex (Reliance/Jio)</th></tr>
+<tr><td><b>Corporate</b></td><td>Which businesses to be in?</td><td>Top leadership</td><td>Enter telecom at all (2016)</td></tr>
+<tr><td><b>SBU</b></td><td>How do we win in this one business?</td><td>Business-unit heads</td><td>Jio's aggressive pricing</td></tr>
+<tr><td><b>Functional</b></td><td>How does each dept support the win?</td><td>Dept heads</td><td>Engg builds network, Ops rolls out coverage</td></tr>
+</table>
+<li>Corporate mistake >> costlier to undo than functional mistake.</li>
+<li>Even a single momo cart makes decisions at all 3 levels.</li>
+</ul>
+<b style="color:var(--accent2)">Strategic Management Model (cyclic, not linear):</b>
+<div class="grid5" style="margin-top:8px">
+<div class="force"><b>1. Scan</b>Outward (mkt/competitors) + inward (own capacity)</div>
+<div class="force"><b>2. Formulate</b>Design strategy, weigh trade-offs</div>
+<div class="force"><b>3. Implement</b>Put plan into action (policies/budgets come alive)</div>
+<div class="force"><b>4. Evaluate</b>Check it's working → often loops back to Scan</div>
+</div>
+<p class="ex">Ex: Priya adds delivery — noticed rain drop-offs (scan) → tested 2 hostels (formulate) → ran 2 wks (implement) → tracked & expanded (evaluate).</p>
+</div>
+</section>
+
+<section id="s10">
+<h2 class="sec">10 <span class="tag">Environmental Scanning & Forecasting</span></h2>
+<div class="card">
+<li><b>Scanning</b> = ongoing habit of watching for change signals <i>before</i> they force your hand. Outward (customers/competitors/tech) + Inward (own capability gaps).</li>
+<li><b>Forecasting</b> = turning scanned signals into a usable, honest guess. 3 methods: <b>Trend extrapolation</b>, <b>Expert judgment</b>, <b>Scenario thinking</b> (best/worst/likely).</li>
+<li class="ex"><b>Nokia (2009→)</b>: had ~60% India share, missed Android/touchscreen shift by clinging to Symbian → collapsed. Signal was visible for years — lesson: scanning ≠ predicting unknowns, it's noticing the visible.</li>
+<li><b>Break-even</b> = Fixed Costs ÷ Profit per unit. (e.g. ₹30,000 ÷ ₹48/plate ≈ 625 plates/month ≈ 21/day)</li>
+</ul>
+</div>
+</section>
+
+<section id="s11">
+<h2 class="sec">11 <span class="tag">Porter's Five Forces</span></h2>
+<div class="card">
+<div class="grid5">
+<div class="force"><b>New Entrants</b>How easily can a new player join?</div>
+<div class="force"><b>Buyer Power</b>Can buyers switch/demand low prices?</div>
+<div class="force"><b>Supplier Power</b>Can suppliers squeeze margins?</div>
+<div class="force"><b>Rivalry</b>How fierce is price/ad/innovation fight?</div>
+<div class="force"><b>Substitutes</b>Diff. product, same need — <b>most overlooked!</b></div>
+</div>
+<p class="ex" style="margin-top:8px"><b>Patanjali case</b>: disrupted decades-stable Indian FMCG (HUL) via Ayurvedic/swadeshi positioning → proved even stable industries face new entrants. Ratings: Entrants <span class="pill high">HIGH</span> Buyers <span class="pill high">HIGH</span> Rivalry <span class="pill high">HIGH</span></p>
+<p class="ex"><b>Momo cart</b>: Entrants <span class="pill high">HIGH</span>, Substitutes <span class="pill high">HIGH</span>, Suppliers <span class="pill low">LOW</span></p>
+<li>Weak forces → even average execution wins. Strong forces → punish even brilliant execution.</li>
+</ul>
+</div>
+</section>
+
+<section id="s12">
+<h2 class="sec">12 <span class="tag">SWOT & Industry Analysis</span></h2>
+<div class="card">
+<div class="grid2">
+<div class="force"><b>Strengths</b> (internal) — genuinely good at; must be rare/hard-to-copy</div>
+<div class="force"><b>Weaknesses</b> (internal) — genuinely vulnerable, name honestly</div>
+<div class="force"><b>Opportunities</b> (external) — changes in your favour</div>
+<div class="force"><b>Threats</b> (external) — changes against you</div>
+</div>
+<p style="margin-top:8px">Same external event can be O for one biz, T for another.</p>
+<table>
+<tr><th></th><th>SWOT</th><th>Five Forces</th></tr>
+<tr><td>Scope</td><td>One business</td><td>Whole category structure</td></tr>
+<tr><td>Nature</td><td>Internal + external mix</td><td>Purely external/structural</td></tr>
+<tr><td>Use</td><td>Quick, personal starting point</td><td>Rigorous, cross-category comparison</td></tr>
+</table>
+<li><b>Industry analysis</b>: zooms out to whole industry size/growth/players (vs SWOT = one biz).</li>
+<li>Mistakes: generic strengths, confusing weakness↔threat, too-long lists, never updating.</li>
+</ul>
+</div>
+</section>
+
+<section id="s13">
+<h2 class="sec">13 <span class="tag">Organizational Resources, Capabilities & Core Competencies</span></h2>
+<div class="card">
+<ul>
+<li><b>Resources</b> = inputs a firm owns/controls — <i>Tangible</i> (cash, plant, land, machinery) vs <i>Intangible</i> (brand, patents, culture, know-how, reputation).</li>
+<li><b>Capability</b> = a firm's capacity to deploy resources together, purposefully, to achieve a desired outcome — resources alone do nothing without the capability to combine them.</li>
+<li><b>Core Competence</b> = a bundle of skills/capabilities that (a) is hard to imitate, (b) creates real customer value, and (c) can be leveraged across multiple products/markets.</li>
+<li class="ex">Ex: Honda's core competence = small-engine design → used across bikes, cars, generators, lawnmowers, boats.</li>
+<li>Not every strength is a core competence — it must pass all three tests above, or it's just "something we're okay at."</li>
+</ul>
+</div>
+</section>
+
+<section id="s13b">
+<h2 class="sec">13 <span class="tag">VRIO Framework</span></h2>
+<div class="card">
+<p>Tests whether a resource/capability can actually deliver <b>sustained</b> competitive advantage — asked in sequence:</p>
+<table>
+<tr><th>Test</th><th>Question</th><th>If "No"</th></tr>
+<tr><td><b>Valuable</b></td><td>Does it help exploit an opportunity / neutralize a threat?</td><td>Competitive disadvantage</td></tr>
+<tr><td><b>Rare</b></td><td>Do few/no competitors have it?</td><td>Competitive parity only</td></tr>
+<tr><td><b>Inimitable</b></td><td>Is it costly/hard for rivals to copy or substitute?</td><td>Temporary advantage only</td></tr>
+<tr><td><b>Organized</b></td><td>Is the firm structured/managed to actually exploit it?</td><td>Unused advantage (wasted potential)</td></tr>
+</table>
+<li class="ex">Ex: Coca-Cola's formula is Valuable + Rare + Inimitable — but without global bottling/distribution (Organized), it would be wasted potential.</li>
+<li>Passing all 4 = <b>Sustained Competitive Advantage</b>. Missing just "Organized" is the most common real-world failure point.</li>
+</ul>
+</div>
+</section>
+
+<section id="s14">
+<h2 class="sec">14 <span class="tag">Value Chain Analysis</span></h2>
+<div class="card">
+<p>Porter's model — breaks the firm into discrete activities to see where value/margin is actually created.</p>
+<div class="grid2">
+<div class="force"><b>Primary Activities</b>Inbound Logistics → Operations → Outbound Logistics → Marketing & Sales → Service</div>
+<div class="force"><b>Support Activities</b>Firm Infrastructure, HR Management, Technology Development, Procurement</div>
+</div>
+<li>Goal: find which activities create the most value vs cost the most — then protect/strengthen the value-creating ones and cut/outsource the rest.</li>
+<li class="ex">Ex: Zara's value chain edge is in Outbound Logistics + Operations (fast replenishment, near-shore manufacturing) rather than Marketing.</li>
+</ul>
+</div>
+</section>
+
+<section id="s15">
+<h2 class="sec">15 <span class="tag">Cost Analysis</span></h2>
+<div class="card">
+<ul>
+<li>Used alongside Value Chain to see <b>where costs actually sit</b> and whether they're justified by the value created there.</li>
+<li><b>Cost drivers</b>: scale, learning/experience curve, capacity utilization, linkages between activities, timing, location, policy choices.</li>
+<li><b>Cost Leadership</b> strategy = systematically drive down cost across the value chain while keeping acceptable quality → compete on price.</li>
+<li class="ex">Ex: a momo cart cutting cost by sourcing veggies directly from a mandi (Procurement) instead of a middleman.</li>
+</ul>
+</div>
+</section>
+
+<section id="s16">
+<h2 class="sec">16 <span class="tag">Competitive Advantage & Outcomes</span></h2>
+<div class="card">
+<ul>
+<li><b>Competitive Advantage</b> = delivering more value to customers than rivals, at a cost that's still profitable — the end-goal every framework above (VRIO, Value Chain, Five Forces) feeds into.</li>
+<li>Two generic routes (Porter): <b>Cost Leadership</b> (lowest cost in industry) or <b>Differentiation</b> (unique value customers will pay more for). Trying to do both without a clear edge = "stuck in the middle."</li>
+<li><b>Outcomes</b> of sustained advantage: above-average returns/profitability, market share growth, brand equity, pricing power.</li>
+<li>Advantage is <b>temporary by default</b> — must be renewed (via dynamic capabilities, continuous evaluation — links back to Principle 10).</li>
+<li class="ex">Ex: Haldiram's — differentiation (trusted taste/hygiene) + cost efficiency (scale) together, not just one.</li>
+</ul>
+</div>
+</section>
+
+<section id="pestle">
+<h2 class="sec">PESTLE <span class="tag">reference guide (Week 4 topic)</span></h2>
+<div class="card">
+<p>Macro external factors, used alongside SWOT:</p>
+<div class="grid5">
+<div class="force"><b>Political</b>Govt policy, tariffs, regulation</div>
+<div class="force"><b>Economic</b>Inflation, spending, supply chain</div>
+<div class="force"><b>Social</b>Demographics, sentiment shifts</div>
+<div class="force"><b>Technological</b>New tech reshaping positioning</div>
+<div class="force"><b>Legal</b>Laws/compliance</div>
+</div>
+<p style="margin-top:6px"><b>Environmental</b> — sustainability/climate factors.</p>
+<p>Question pattern for each: what changed? headwind or tailwind? short/long term?</p>
+</div>
+</section>
+
+<section id="terms">
+<h2 class="sec">Terms of the Day <span class="tag">quick recall</span></h2>
+<div class="card">
+<div class="term"><b>Blitzkrieg</b> — surprise+speed+power fast strike. Biz: Blitzscaling (launch early, ignore bugs, spend fast) — PayPal, OpenAI.</div>
+<div class="term"><b>Kintsugi</b> — repairing with gold, highlighting cracks not hiding. Org: treat setbacks as milestones (acknowledge break, value scars).</div>
+<div class="term"><b>Isomorphism</b> — structure-preserving sameness of form. Institutional isomorphism: ↑ legitimacy/survival, ↓ innovation.</div>
+<div class="term"><b>Schwerpunkt</b> — focal point/center of gravity; an org's "Achilles heel."</div>
+<div class="term"><b>Fabian Strategy</b> — avoid big battles, wear down via attrition/small moves (gray-zone warfare).</div>
+</div>
+</section>
+
+<section id="cheat">
+<h2 class="sec">⚡ Framework Cheat-Sheet <span class="tag">all of Unit 1 at a glance</span></h2>
+<div class="card">
+<table>
+<tr><th>Framework</th><th>One-line</th><th>Components</th></tr>
+<tr><td><b>Policy/Program/Procedure</b></td><td>Rules → Activities → Steps</td><td>3 parts</td></tr>
+<tr><td><b>Nine Building Blocks</b></td><td>Mission→Strategy stack</td><td>Mission, Goal, Objectives, Policy, Program, Procedure, Budget, Tactic, Strategy</td></tr>
+<tr><td><b>10 Principles</b></td><td>Rules of good strategy</td><td>Future, trade-offs, fit-env, fit-capability, lasting adv., buy-in, risk, flexible, execution, evaluation</td></tr>
+<tr><td><b>3 Levels of Strategy</b></td><td>Corporate→SBU→Functional</td><td>Which biz? / How win? / How dept helps?</td></tr>
+<tr><td><b>Strategic Mgmt Model</b></td><td>4-stage cycle</td><td>Scan→Formulate→Implement→Evaluate</td></tr>
+<tr><td><b>Porter's 5 Forces</b></td><td>Category profitability</td><td>Entrants, Buyers, Suppliers, Rivalry, Substitutes</td></tr>
+<tr><td><b>SWOT</b></td><td>Internal+external snapshot</td><td>Strengths, Weaknesses, Opportunities, Threats</td></tr>
+<tr><td><b>Industry Analysis</b></td><td>Zoom out to whole category</td><td>Size, growth, players, patterns</td></tr>
+<tr><td><b>PESTLE</b></td><td>Macro-environment scan</td><td>Political, Economic, Social, Tech, Legal, Environmental</td></tr>
+<tr><td><b>VRIO</b></td><td>Does a resource give real edge?</td><td>Valuable, Rare, Inimitable, Organized</td></tr>
+<tr><td><b>Value Chain</b></td><td>Where is value/cost created?</td><td>5 Primary + 4 Support activities</td></tr>
+<tr><td><b>Generic Strategies</b></td><td>Two routes to advantage</td><td>Cost Leadership, Differentiation</td></tr>
+</table>
+</div>
+</section>
+
+<section id="mcq">
+<h2 class="sec">MCQ Bank <span class="tag">click to check</span></h2>
+<div id="mcqhost"></div>
+</section>
+
+<section id="num">
+<h2 class="sec">Numericals <span class="tag">practice</span></h2>
+<div class="card">
+<details><summary>Q1. Fixed costs ₹40,000/month, profit per unit ₹50. Find break-even units/month & per day.</summary>
+<p>Break-even = 40,000 ÷ 50 = <b>800 units/month</b> ≈ <b>27/day</b> (÷30).</p></details>
+<details><summary>Q2. Revenue ₹2,40,000, COGS is 40% of revenue, fixed cost ₹30,000. Find net profit.</summary>
+<p>COGS = 0.40 × 2,40,000 = 96,000. Net Profit = 2,40,000 − 96,000 − 30,000 = <b>₹1,14,000</b>.</p></details>
+<details><summary>Q3. 100 plates/day @ ₹80, 5% MoM growth — find Month 2 plates/day and revenue (₹80/plate, 30 days).</summary>
+<p>Plates: 100×1.05 = <b>105/day</b>. Monthly revenue = 105×30×80 = <b>₹2,52,000</b>.</p></details>
+<details><summary>Q4. If a rival cart opens within 50m, growth forecast is cut by 2-3%. Original growth 8%, apply cut — new growth rate?</summary>
+<p>New growth ≈ 8% − 2.5% (mid) = <b>~5.5%</b> (accept 5–6% range).</p></details>
+</div>
+</section>
+
+<section id="sa">
+<h2 class="sec">Short & Long Answer Practice</h2>
+<div class="card">
+<b style="color:var(--accent)">Short Answer (2-3 lines)</b>
+<details><summary>Differentiate Policy vs Procedure with an example.</summary>
+<p>A <b>Policy</b> is a standing guideline/boundary with indefinite duration (e.g. "only fresh ingredients"). A <b>Procedure</b> is a fixed, repeatable step-by-step method (e.g. wash → steam → plate → serve). Policy sets the rule; Procedure is the exact routine followed every time to stay inside it.</p></details>
+<details><summary>Why is Threat of Substitutes the "most overlooked" force?</summary>
+<p>Because it isn't a direct competitor selling the same product — it's a different product solving the same customer need, so it's easy to miss while watching rivals in your own category (e.g. a momo cart losing customers to a sandwich stall, not another momo seller).</p></details>
+<details><summary>Give one reason a corporate-level mistake is costlier than a functional one.</summary>
+<p>A corporate-level mistake (e.g. entering the wrong business entirely) commits large capital and resources across the whole firm and is hard/slow to reverse; a functional mistake (e.g. a bad ad campaign) is contained to one department and far cheaper/faster to fix.</p></details>
+<details><summary>What's the difference between a Goal and an Objective?</summary>
+<p>A <b>Goal</b> is a long-term, semi-broad aim (e.g. "become the top regional dairy brand"). An <b>Objective</b> is specific and measurable, and changes more often (e.g. "increase market share by 5% this quarter"). Goals set direction; Objectives are the concrete, trackable targets under that direction.</p></details>
+
+<b style="color:var(--accent)">Long Answer (case-style, 8-10 lines)</b>
+<details><summary>Take any Indian business you know. Identify its Mission, one Goal, one Objective, one Policy, one Program, one Procedure, a rough Budget, and one Tactic — show how they all trace back to the mission.</summary>
+<p><b>Model answer (using Amul):</b> <b>Mission</b> — "fair returns for farmers" (why it exists, unchanged since 1946). <b>Goal</b> — become India's largest and most trusted dairy cooperative. <b>Objective</b> — expand milk procurement volume by X% this year. <b>Policy</b> — only procure from registered farmer cooperatives at fixed fair prices. <b>Program</b> — a 6-month rural cold-chain expansion drive. <b>Procedure</b> — the fixed daily steps for milk collection, testing, and chilling at each village center. <b>Budget</b> — capital allocated for new chilling units this year. <b>Tactic</b> — a short festive-season ad push for Amul ice cream. Each layer narrows the one above it — Mission stays fixed at the top, Tactic is the fastest-changing, most ground-level move — and every layer must trace back to "fair returns for farmers," or it's a contradiction, not a strategy.</p></details>
+<details><summary>Apply Porter's Five Forces to any industry of your choice (rate each Low/Mod/High/Very High with 1-line reasoning each), then conclude on overall attractiveness.</summary>
+<p><b>Model answer (using Indian quick-commerce/instant delivery):</b> <b>New Entrants — High:</b> low tech barrier, VC funding readily available. <b>Buyer Power — High:</b> customers switch apps instantly for better pricing/speed, near-zero switching cost. <b>Supplier Power — Low/Mod:</b> many FMCG/grocery suppliers compete for shelf space on these platforms. <b>Rivalry — Very High:</b> Zepto/Blinkit/Instamart in constant price and speed wars. <b>Substitutes — High:</b> local kirana stores, large-basket weekly grocery runs. <b>Conclusion:</b> an unattractive industry structurally (four of five forces High/Very High) — profitability depends on scale and operational efficiency, not the category itself.</p></details>
+<details><summary>Explain the 4-stage Strategic Management Model using a real or hypothetical business decision, one stage at a time.</summary>
+<p><b>Model answer (Priya's food delivery add-on):</b> <b>1. Scan</b> — she notices rainy-day walk-in drop-offs and hears hostel students complaining about food options (outward) while reviewing her own idle evening capacity (inward). <b>2. Formulate</b> — she designs a plan: test delivery to 2 nearby hostels, decide pricing and delivery windows, weigh the trade-off of extra labor cost vs potential new revenue. <b>3. Implement</b> — she runs the pilot for 2 weeks, actually taking orders and delivering. <b>4. Evaluate</b> — she tracks order volume and margins after the pilot; results are good, so she expands to more hostels — which loops back into a fresh Scan of the next opportunity. The model is cyclic, not a one-time exercise — each Evaluate feeds the next Scan.</p></details>
+<details><summary>Build a SWOT for a business you know, then explain 2 ways it differs from a Five Forces analysis of the same industry.</summary>
+<p><b>Model answer (using a local momo cart):</b> <b>Strengths</b> — low overhead, loyal regulars, fast service. <b>Weaknesses</b> — no fixed location, weather-dependent, no hygiene certification. <b>Opportunities</b> — a new hostel opening nearby, food-delivery app partnerships. <b>Threats</b> — a rival cart opening within 50m, rising LPG/ingredient costs. <b>Difference 1 — Scope:</b> SWOT looks at this one business specifically (internal + external mixed together); Five Forces looks at the whole street-food category's structure, ignoring this cart's individual strengths/weaknesses. <b>Difference 2 — Use:</b> SWOT is a quick, personal starting point any single owner can sketch in minutes; Five Forces is a more rigorous tool for comparing attractiveness across entire categories/industries, useful before even entering a business.</p></details>
+</div>
+</section>
+
+
+<div class="unitdiv">UNIT 2 — Strategy Formulation &amp; Strategic Alternatives <span style="color:var(--txt-dim);font-weight:500;font-size:12.5px">· Sessions 18–23</span></div>
+
+<section id="u2-1">
+<h2 class="sec">1 <span class="tag">Introduction to Strategy Formulation</span></h2>
+<div class="card">
+<ul>
+<li>Once Unit 1 tells you WHERE you stand (SWOT, Five Forces), Unit 2 answers WHERE to go and HOW.</li>
+<li><b>Strategy Formulation</b> = deciding WHAT to do next — the planning/choice stage, as opposed to <b>Implementation</b> (actually DOING it: execution, resource allocation, structure).</li>
+<li>Formulation failures are strategic; implementation failures are operational — but a brilliant formulation with poor implementation still fails.</li>
+<li>Mainly driven by top/senior management (corporate &amp; SBU level), fed by inputs from functional managers and environmental scanning.</li>
+<li class="ex">Everything from Unit 1 — Mission, SWOT, Five Forces, PESTLE, VRIO/Core Competencies — is raw material for this stage.</li>
+</ul>
+</div>
+</section>
+
+<section id="u2-2">
+<h2 class="sec">2 <span class="tag">The Strategic Formulation Process</span></h2>
+<div class="card">
+<table>
+<tr><th>Step</th><th>What happens</th></tr>
+<tr><td><b>1. Environmental Analysis</b></td><td>Revisit external (PESTLE, Five Forces) + internal (SWOT, VRIO, Value Chain) — confirm where the firm stands.</td></tr>
+<tr><td><b>2. Revisit Objectives</b></td><td>Check Mission/Goals/Objectives are still realistic given the environment; revise if not.</td></tr>
+<tr><td><b>3. Generate Alternatives</b></td><td>Grand Strategy Alternatives, TOWS, Ansoff, BCG/GE-McKinsey — generate real options.</td></tr>
+<tr><td><b>4. Evaluate Alternatives</b></td><td>Test suitability (fits environment/capability?), feasibility (resources/time), acceptability (risk/return).</td></tr>
+<tr><td><b>5. Select the Strategy</b></td><td>Pick the best risk/return balance; large firms may pick a Combination across SBUs.</td></tr>
+<tr><td><b>6. Prepare for Implementation</b></td><td>Translate choice back into Policies/Programs/Procedures/Budgets/Tactics (Unit 1 blocks).</td></tr>
+</table>
+<li class="ex">⚡ It's iterative, not linear — Step 4 (Evaluate) can send you back to Step 3, and the whole loop restarts whenever the environment shifts (same cyclic logic as the Strategic Mgmt Model).</li>
+</ul>
+</div>
+</section>
+
+<section id="u2-3">
+<h2 class="sec">3 <span class="tag">Grand Strategy Alternatives</span></h2>
+<div class="card">
+<p>Four broad directions. Choice depends on: industry attractiveness, competitive position, resources, risk appetite.</p>
+<table>
+<tr><th>Strategy</th><th>Definition</th><th>Choose When</th><th>Example</th></tr>
+<tr><td><b>Stability</b></td><td>Keep doing what works, same products/markets/scale</td><td>Stable environment; growth would strain quality</td><td class="ex">Family-run sweets brands staying regional deliberately</td></tr>
+<tr><td><b>Growth</b></td><td>Expand sales, share, assets, or markets</td><td>Strong position; resources available</td><td class="ex">Reliance Jio's 2016 data bet</td></tr>
+<tr><td><b>Retrenchment</b></td><td>Shrink, exit, or restructure</td><td>Losing money, relevance, or competitiveness</td><td class="ex">Jet Airways cutting routes (too late)</td></tr>
+<tr><td><b>Combination</b></td><td>Different moves across different BUs simultaneously</td><td>Large, diversified conglomerates</td><td class="ex">Tata: growing TCS &amp; Tata Motors, divesting Teleservices</td></tr>
+</table>
+<li><b>Growth is NOT the default</b> — it's a deliberate choice.</li>
+<li>Retrenchment chosen early = strategy. Forced late = collapse (Jet Airways 2019).</li>
+<li>Unit 1 feeds this: Five Forces brutal → Stability/Retrenchment; strong SWOT strength → Growth.</li>
+</ul>
+</div>
+</section>
+
+<section id="u2-4">
+<h2 class="sec">4 <span class="tag">TOWS Matrix</span></h2>
+<div class="card">
+<li>Developed by Heinz Weihrich (1982). SWOT = diagnosis (what's true). TOWS = prescription (what to DO about it).</li>
+<li>"TOWS" deliberately starts from outside (T, O) before looking inside (W, S).</li>
+</ul>
+<div class="grid2" style="margin-top:8px">
+<div class="force"><b>SO — Maxi-Maxi ⚔ ATTACK</b>Use Strengths to capture Opportunities. <span class="ex">Amul: cooperative supply chain → expanded into ice cream/cheese (urban dairy demand)</span></div>
+<div class="force"><b>ST — Maxi-Mini 🛡 DEFEND</b>Use Strengths to neutralise Threats. <span class="ex">Indian IT: English-speaking talent → US/UK offices to blunt anti-outsourcing backlash</span></div>
+<div class="force"><b>WO — Mini-Maxi 🔧 FIX &amp; GROW</b>Use Opportunities to fix Weaknesses. <span class="ex">Ola Electric: high fuel costs (W) + FAME II subsidies (O) → launched EV division</span></div>
+<div class="force"><b>WT — Mini-Mini 🆘 SURVIVE</b>Minimise Weaknesses, avoid Threats. <span class="ex">Jet Airways: should've sold assets/cut routes/found a partner. Didn't. Collapsed 2019.</span></div>
+</div>
+<p style="margin-top:8px"><b>Limitations:</b> only as good as the SWOT feeding it; subjective (same SWOT → different strategies); doesn't prioritize/rank; static — must be revisited.</p>
+</div>
+</section>
+
+<section id="u2-5">
+<h2 class="sec">5 <span class="tag">Ansoff Matrix</span></h2>
+<div class="card">
+<p>Igor Ansoff, HBR 1957. If growth is the right call — HOW do we grow? Two questions: existing/new product × existing/new market. <b>Risk rises the further you move from what you already know.</b></p>
+<table>
+<tr><th></th><th>EXISTING PRODUCT</th><th>NEW PRODUCT</th></tr>
+<tr><td><b>EXISTING MARKET</b></td><td><b>Market Penetration</b> — sell more of same to same customers. Ex: Colgate "brush twice a day". <span class="pill low">Risk: Lowest</span></td><td><b>Product Development</b> — new product to existing customers. Ex: Maggi adding oats noodles. <span class="pill mod">Risk: Medium-High</span></td></tr>
+<tr><td><b>NEW MARKET</b></td><td><b>Market Development</b> — same product to new customers/geo. Ex: Haldiram's going pan-India &amp; abroad. <span class="pill mod">Risk: Medium</span></td><td><b>Diversification</b> — new product + new market. Ex: ITC: cigarettes → hotels, FMCG. <span class="pill high">Risk: Highest</span></td></tr>
+</table>
+<p class="ex" style="margin-top:8px">Risk ladder: Market Penetration → Market Development → Product Development → Diversification (lowest → highest).</p>
+<li>⚡ Common mistake: companies chase Diversification to escape a broken core business — wrong. Fix the core first.</li>
+</ul>
+</div>
+</section>
+
+<section id="u2-6">
+<h2 class="sec">6 <span class="tag">Diversification — Related vs Unrelated</span></h2>
+<div class="card">
+<div class="grid2">
+<div class="force"><b>Related</b>New business shares something REAL — customers, distribution, brand, raw material. Genuine synergy. <span class="ex">Nike: shoes → apparel via same retail channels</span></div>
+<div class="force"><b>Unrelated</b>New business shares NOTHING operational — only capital under the same owner. Riskier. <span class="ex">Virgin: music → airlines → health clubs</span></div>
+</div>
+<p style="margin-top:8px"><b>ITC (must know):</b> 1910 tobacco only → 1970s–90s hotels &amp; paperboards (Related, shared inputs/skills) → 2000s FMCG (Aashirvaad, Sunfeast, Bingo) using distribution reach + cigarette cash to fund years of losses.</p>
+<li><b>Why diversification usually fails:</b> no real synergy (just founder's interest); underestimating how different the new business is; starving new OR old business of resources; no patience for the payback period.</li>
+</ul>
+</div>
+</section>
+
+<section id="u2-7">
+<h2 class="sec">7 <span class="tag">BCG Matrix</span></h2>
+<div class="card">
+<p>Boston Consulting Group, 1970. Axes: Market Growth Rate × Relative Market Share. For diversified firms — decide where to invest/hold/exit across SBUs. <b>Cash Cows fund Stars. Divest Dogs. Nurture Question Marks selectively.</b></p>
+<table>
+<tr><th></th><th>HIGH MARKET SHARE</th><th>LOW MARKET SHARE</th></tr>
+<tr><td><b>HIGH GROWTH</b></td><td>⭐ <b>Stars</b> — Invest heavily, future Cash Cows. <span class="ex">Zenith Fleet</span></td><td>❓ <b>Question Marks</b> — Invest selectively or exit. <span class="ex">Zenith E-Volt</span></td></tr>
+<tr><td><b>LOW GROWTH</b></td><td>🐄 <b>Cash Cows</b> — Harvest, fund other SBUs. <span class="ex">Zenith Astra</span></td><td>🐕 <b>Dogs</b> — Divest or exit. <span class="ex">Zenith Urban S-1</span></td></tr>
+</table>
+</div>
+</section>
+
+<section id="u2-8">
+<h2 class="sec">8 <span class="tag">GE-McKinsey Matrix</span></h2>
+<div class="card">
+<li>GE + McKinsey, early 1970s. Richer alternative to BCG — two <b>composite, weighted</b> scores instead of two raw numbers.</li>
+<li><b>Y-axis</b>: Industry Attractiveness (size, growth, intensity, margins, tech, regulation). <b>X-axis</b>: Business Strength (share, brand, cost position, distribution, capability, mgmt quality).</li>
+<li>Output: 3×3 grid = 9 cells collapsing into 3 zones.</li>
+</ul>
+<div class="grid2" style="margin-top:8px">
+<div class="force">🟢 <b>INVEST / GROW</b>High/High, High/Medium</div>
+<div class="force">🟡 <b>SELECTIVE / HOLD</b>Medium/High, High/Low, Medium/Medium, Low/High</div>
+</div>
+<div class="force" style="margin-top:8px">🔴 <b>HARVEST / DIVEST</b>Medium/Low, Low/Medium, Low/Low</div>
+<p style="margin-top:10px"><b>Scoring steps (numericals!):</b> list 5–6 factors per axis → assign weights per axis summing to 1.0 → score each factor 1(poor)–5(excellent) → weight × score per factor, sum → plot on the 3×3 grid.</p>
+<p class="ex">BCG = fast, objective, 2 hard numbers. GE = richer, judgment-based, weighted factors — handles nuance BCG misses, but more complex/time-consuming and scores can be gamed or biased.</p>
+</div>
+</section>
+
+<section id="u2-9">
+<h2 class="sec">9 <span class="tag">Product Life Cycle (PLC)</span></h2>
+<div class="card">
+<p>Levitt (1965). Every product moves Introduction → Growth → Maturity → Decline; strategy must shift each stage. PLC explains WHY SBUs move between BCG quadrants over time — adds the time dimension BCG lacks.</p>
+<table>
+<tr><th>Stage</th><th>Sales</th><th>Strategy</th><th>BCG Link</th><th>Example</th></tr>
+<tr><td><b>Introduction</b></td><td>Low, loss-making</td><td>High awareness spend, prove category</td><td>Question Mark ❓</td><td class="ex">Zepto</td></tr>
+<tr><td><b>Growth</b></td><td>Rising fast</td><td>Grab share before saturation</td><td>Star ⭐</td><td class="ex">UPI apps 2018–21</td></tr>
+<tr><td><b>Maturity</b></td><td>Flat/peak</td><td>Defend share, extend product life</td><td>Cash Cow 🐄</td><td class="ex">Parle-G biscuits</td></tr>
+<tr><td><b>Decline</b></td><td>Falling</td><td>Milk remaining demand or exit</td><td>Dog 🐕</td><td class="ex">Nokia feature phones</td></tr>
+</table>
+<li>Maturity ≠ end — relaunch, new variants/use-cases can extend the cycle (ex: Maggi's many variants).</li>
+<li>Limitations: not all products follow a neat curve; easier to spot the stage in hindsight than real-time; external shocks (new tech, pandemic) override the curve.</li>
+</ul>
+</div>
+</section>
+
+<section id="u2-case">
+<h2 class="sec">⭐ <span class="tag">Zenith Motors — Case Summary &amp; Answers</span></h2>
+<div class="card">
+<p style="color:var(--accent3);font-weight:600">Know this inside-out — the ungraded test was on this; same logic applies in the graded quiz.</p>
+<table>
+<tr><th>Strengths</th><td>1,200 franchised dealerships; safety reputation; strong cash reserves</td></tr>
+<tr><th>Weaknesses</th><td>High EV production costs; no in-house battery manufacturing; high CAC in non-core segments</td></tr>
+<tr><th>Opportunities</th><td>Govt clean-energy subsidies; rising commercial fleet demand (zero-emission logistics)</td></tr>
+<tr><th>Threats</th><td>Volatile lithium/cobalt prices; strict urban zero-emission regs; price cuts by digital EV entrants</td></tr>
+</table>
+<p style="margin-top:10px"><b>Q1 — TOWS:</b> <i>SO</i> — leverage the 1,200-dealership network to sell/service commercial delivery vans (captures fleet demand + subsidies). <i>WT</i> — JV/partnerships for battery manufacturing (fixes no in-house capacity + hedges raw-material volatility via index-linked contracts).</p>
+<p><b>Q2 — Ansoff:</b></p>
+<table>
+<tr><td>Next-gen E-Volt SUV for current owners</td><td><b>Product Development</b></td></tr>
+<tr><td>Zenith Fleet vans into Latin America</td><td><b>Market Development</b></td></tr>
+<tr><td>Trade-in incentives/warranties for Zenith Astra</td><td><b>Market Penetration</b></td></tr>
+<tr><td>Subscription fleet software for 3rd-party operators</td><td><b>Diversification</b></td></tr>
+</table>
+<p style="margin-top:10px"><b>Q3 &amp; Q4 — BCG + GE-McKinsey, all 4 SBUs:</b></p>
+<table>
+<tr><th>SBU</th><th>Share/Growth</th><th>BCG</th><th>GE Mandate</th><th>Action</th></tr>
+<tr><td>Zenith Astra (Sedans)</td><td>38% (#1) / −4%</td><td>Cash Cow 🐄</td><td>Hold→Harvest</td><td class="ex">Extract cash; fund E-Volt</td></tr>
+<tr><td>Zenith E-Volt (Electric)</td><td>4% (#6) / +28%</td><td>Question Mark ❓</td><td>Hold→Invest</td><td class="ex">Fund to become a Star</td></tr>
+<tr><td>Zenith Fleet (Vans)</td><td>29% (#2) / +6%</td><td>Star ⭐</td><td>Invest/Grow</td><td class="ex">Reinvest B2B revenues</td></tr>
+<tr><td>Zenith Urban S-1 (Scooters)</td><td>2% (#9) / +1%</td><td>Dog 🐕</td><td>Harvest/Divest</td><td class="ex">Exit; capital → Fleet</td></tr>
+</table>
+<li style="margin-top:6px"><b>Cash-flow strategy:</b> HARVEST Astra → fund E-Volt. DIVEST Urban S-1 → redirect capital to Fleet. INVEST in E-Volt (Question Mark → Star). MAINTAIN Fleet via its own B2B revenues.</li>
+</ul>
+</div>
+</section>
+
+<section id="u2-cheat">
+<h2 class="sec">⚡ Framework Cheat-Sheet <span class="tag">all of Unit 2 at a glance</span></h2>
+<div class="card">
+<table>
+<tr><th>Framework</th><th>Structure</th><th>When to Use</th><th>Key Examples</th></tr>
+<tr><td><b>Grand Strategy</b></td><td>Stability/Growth/Retrenchment/Combination</td><td>Choose overall corporate direction</td><td class="ex">Tata = Combination</td></tr>
+<tr><td><b>TOWS Matrix</b></td><td>SO/WO/ST/WT (2×2)</td><td>Translate SWOT into action</td><td class="ex">SO=Attack, WT=Survive</td></tr>
+<tr><td><b>Ansoff Matrix</b></td><td>Penetration/Product Dev/Market Dev/Diversification</td><td>Decide HOW to grow</td><td class="ex">ITC=Diversification</td></tr>
+<tr><td><b>BCG Matrix</b></td><td>Stars/Question Marks/Cash Cows/Dogs</td><td>Portfolio: invest/hold/exit</td><td class="ex">Cash Cows fund Stars</td></tr>
+<tr><td><b>GE-McKinsey</b></td><td>3×3, weighted composite axes</td><td>Richer portfolio view than BCG</td><td class="ex">Weight × score, sum, plot</td></tr>
+<tr><td><b>PLC</b></td><td>Intro→Growth→Maturity→Decline</td><td>Maps movement within BCG over time</td><td class="ex">Intro=? Mark, Decline=Dog</td></tr>
+<tr><td><b>Diversification</b></td><td>Related (synergy) vs Unrelated (capital only)</td><td>Decide HOW to diversify</td><td class="ex">Nike=Related, Virgin=Unrelated</td></tr>
+</table>
+<p class="ex" style="margin-top:8px">⚡ Remember the chain: SWOT → TOWS → Grand Strategy → Ansoff (HOW to grow) → BCG/GE (WHICH SBU to invest in) → PLC (movement over time)</p>
+</div>
+</section>
+
+<section id="u2-mcq">
+<h2 class="sec">MCQ Bank <span class="tag">Unit 2 · click to check</span></h2>
+<div id="mcqhost2"></div>
+</section>
+
+<section id="u2-sa">
+<h2 class="sec">Short &amp; Long Answer Practice <span class="tag">Unit 2</span></h2>
+<div class="card">
+<b style="color:var(--accent)">Short Answer (2-3 lines)</b>
+<details><summary>Differentiate Strategy Formulation from Strategy Implementation.</summary>
+<p><b>Formulation</b> = deciding WHAT to do — planning, choosing among alternatives (TOWS, Ansoff, BCG etc.), mainly top/senior management. <b>Implementation</b> = actually DOING it — executing the plan via resource allocation, structure, and day-to-day operations. A brilliant formulation with poor implementation still fails.</p></details>
+<details><summary>Why does TOWS deliberately start from the outside (Threats/Opportunities) rather than the inside?</summary>
+<p>Because external conditions (what the market/environment is doing) ultimately decide which internal strengths or weaknesses even matter — starting outside forces you to ask "what does the environment demand?" before asking "what can we do?", avoiding strategies that look good internally but ignore where the real opportunity or danger actually is.</p></details>
+<details><summary>Give one reason Diversification is the riskiest Ansoff quadrant.</summary>
+<p>It combines a new product with a new market simultaneously — the firm has no existing customer relationships, no proven product-market fit, and no fallback if either assumption is wrong, unlike the other three quadrants which keep at least one variable (product or market) familiar.</p></details>
+<details><summary>What does PLC add to the BCG Matrix that BCG alone lacks?</summary>
+<p>PLC adds the <b>time dimension</b> — BCG is a snapshot of share/growth at one moment, while PLC explains WHY and WHEN an SBU moves between BCG quadrants over its life (Question Mark → Star → Cash Cow → Dog), showing the trajectory rather than just the current position.</p></details>
+
+<b style="color:var(--accent)">Long Answer (case-style, 8-10 lines)</b>
+<details><summary>Take any Indian business. Walk it through all 6 steps of the Strategic Formulation Process, one stage at a time.</summary>
+<p><b>Model answer (using Haldiram's considering a new EV-delivery fleet):</b> <b>1. Environmental Analysis</b> — scans rising fuel costs and urban EV subsidies (PESTLE) alongside its own strong cash reserves (SWOT). <b>2. Revisit Objectives</b> — confirms its logistics-cost objective is still realistic given fuel volatility. <b>3. Generate Alternatives</b> — options emerge via Grand Strategy (Growth), Ansoff (Market Penetration via cheaper delivery) and BCG-style portfolio thinking. <b>4. Evaluate Alternatives</b> — tests EV fleet adoption for suitability (fits sustainability push), feasibility (capital available), acceptability (acceptable payback period). <b>5. Select the Strategy</b> — chooses a phased EV fleet rollout (a Growth strategy). <b>6. Prepare for Implementation</b> — translates this into a Policy (EV-first for new vehicle purchases), a Program (12-month rollout), Procedures (charging/maintenance routines) and a Budget.</p></details>
+<details><summary>Build a TOWS matrix for a business you know (one strategy per quadrant), then explain its main limitation.</summary>
+<p><b>Model answer (using a neighborhood gym):</b> <b>SO</b> — use its certified-trainer reputation (S) to launch premium personal-training packages for the growing fitness-conscious demand (O). <b>ST</b> — use its loyal member base (S) to offer referral discounts, defending against new budget-gym entrants (T). <b>WO</b> — use rising demand for home workouts (O) to fix its limited floor space (W) by launching an online class add-on. <b>WT</b> — minimise its weak brand recall (W) and avoid aggressive price wars from chains (T) by niching into a specific segment (e.g. women-only hours) instead of competing head-on. <b>Main limitation:</b> TOWS is only as good as the SWOT feeding it — if the SWOT is shallow or biased, the resulting strategies will be too, and it offers no way to rank which quadrant's strategy to pursue first.</p></details>
+<details><summary>Place 3–4 SBUs of a diversified company on the BCG Matrix and justify each placement with share/growth logic.</summary>
+<p><b>Model answer (using ITC):</b> <b>Cigarettes</b> = <b>Cash Cow</b> — high share, low/flat growth in a mature, regulated category; generates steady cash. <b>FMCG (Aashirvaad, Sunfeast)</b> = <b>Star</b> — fast-growing packaged foods market where ITC has built real share using cigarette cash. <b>Hotels</b> = <b>Question Mark</b> — moderate growth but lower relative share versus dedicated hospitality chains, needs selective investment. <b>Paperboards</b> = <b>Cash Cow/Dog borderline</b> — low-growth, stable segment, depends on current share trend. Justification always follows the same two levers: relative market share (x-axis) and category growth rate (y-axis) — not profitability or revenue size alone.</p></details>
+<details><summary>Compare BCG vs GE-McKinsey for a company with 5+ SBUs — when would you prefer the more complex GE model?</summary>
+<p><b>BCG</b> is fast and objective — just two hard numbers (share, growth) — good for a quick first-pass portfolio view. <b>GE-McKinsey</b> uses weighted, multi-factor composite scores on both axes (Industry Attractiveness, Business Strength), capturing nuance BCG's two raw numbers miss (e.g. regulation, brand, management quality). <b>Prefer GE-McKinsey when:</b> the company has 5+ SBUs with genuinely different competitive dynamics (not just differing in share/growth), when qualitative factors like regulation or technology shifts matter heavily, or when a board needs a more defensible, documented rationale for big capital-allocation calls — the added complexity and time cost is worth it precisely because more is riding on getting the call right.</p></details>
+</div>
+</section>
+
+<section id="u2-examcase">
+<h2 class="sec">🎯 <span class="tag">Zenith Motors — Exam-Format Practice (exactly how it'll come in the midsem)</span></h2>
+<div class="card">
+<p style="color:var(--accent3);font-weight:600">This is the real case brief + the exact 4 assignment questions, in the same shape as the actual case study paper. Attempt each one yourself first — then click to reveal the model answer.</p>
+
+<b style="color:var(--accent)">Case Brief — Zenith Motors &amp; The Strategic Pivot</b>
+<ul>
+<li>Founded <b>1986</b> · 40-year-old traditional automaker known for reliable gasoline sedans.</li>
+<li>Annual enterprise revenue: <b>$14.2B</b> (down 6% YoY) · 12 assembly plants (North America, Europe, SE Asia) · 1,200 franchised dealerships.</li>
+<li>Crisis: EV shift, rising fuel prices, agile EV startups → total market share eroded <b>18%</b> over 3 years. New CEO <b>Maya Lin</b> must use TOWS, Ansoff, BCG and GE-McKinsey to reorganize the SBU portfolio.</li>
+</ul>
+
+<table style="margin-top:8px">
+<tr><th>Internal</th><th></th></tr>
+<tr><td><b>Strengths</b></td><td>Nationwide dealership/service network; trusted safety reputation; deep cash reserves from traditional sales</td></tr>
+<tr><td><b>Weaknesses</b></td><td>High EV production costs; no in-house battery manufacturing; high CAC in non-core transit segments</td></tr>
+<tr><th>External</th><th></th></tr>
+<tr><td><b>Opportunities</b></td><td>Govt subsidies for clean-energy transit; rising commercial fleet demand for zero-emission delivery</td></tr>
+<tr><td><b>Threats</b></td><td>Volatile lithium/cobalt prices; strict urban zero-emission regs; aggressive price cuts by digital EV entrants</td></tr>
+</table>
+
+<table style="margin-top:8px">
+<tr><th>SBU</th><th>Relative Share</th><th>Category Growth</th><th>Revenue Share</th></tr>
+<tr><td><b>Zenith Astra</b> (Gasoline Sedans)</td><td>High — 38% (#1)</td><td>Low — −4%</td><td>65% ($9.23B)</td></tr>
+<tr><td><b>Zenith E-Volt</b> (Electric Passenger Vehicles)</td><td>Low — 4% (#6)</td><td>High — +28%</td><td>15% ($2.13B)</td></tr>
+<tr><td><b>Zenith Fleet</b> (Commercial Delivery Vans)</td><td>High — 29% (#2)</td><td>Medium — +6%</td><td>15% ($2.13B)</td></tr>
+<tr><td><b>Zenith Urban S-1</b> (E-Scooters)</td><td>Low — 2% (#9)</td><td>Low — +1%</td><td>5% ($0.71B)</td></tr>
+</table>
+
+<details style="margin-top:14px">
+<summary>Q1 — TOWS Matrix Analysis. (a) Develop one SO strategy leveraging Zenith's distribution capabilities to capture commercial market growth. (b) Develop one WT defensive strategy that mitigates production-cost challenges while protecting against raw-material volatility and strict regulations.</summary>
+<p><b>(a) SO:</b> Leverage Zenith's network of 1,200 franchised dealerships and nationwide distribution to market, sell, and service commercial delivery vans — directly capturing rising commercial fleet demand for zero-emission logistics while tapping government clean-energy transit subsidies.</p>
+<p><b>(b) WT:</b> Form strategic supply partnerships or joint ventures for battery manufacturing to address the lack of in-house battery capacity and high EV production costs. Use long-term index-linked contracts to hedge lithium/cobalt price volatility, ensuring regulatory compliance and better cost competitiveness against digital EV entrants.</p>
+</details>
+
+<details>
+<summary>Q2 — Ansoff Growth Matrix. Categorize each option into its exact quadrant (Market Penetration / Product Development / Market Development / Diversification): <br>A) Next-gen E-Volt SUV on a new battery architecture, for current Zenith owners. <br>B) Expanding Zenith Fleet vans into Latin America. <br>C) Trade-in incentives + extended warranties to boost Zenith Astra sales in existing territories. <br>D) Subscription-based fleet logistics software for 3rd-party commercial transport operators.</summary>
+<p><b>A — Product Development:</b> new product (E-Volt SUV) to an existing market (current Zenith owners).</p>
+<p><b>B — Market Development:</b> existing product (Fleet vans) into a new geographic market (Latin America).</p>
+<p><b>C — Market Penetration:</b> existing product (Astra), promoted harder in existing dealer territories.</p>
+<p><b>D — Diversification:</b> new product (software service) for a new target market (3rd-party operators).</p>
+</details>
+
+<details>
+<summary>Q3 — BCG Matrix Portfolio &amp; Cash Allocation. (a) Plot all 4 SBUs into the BCG Matrix. (b) Detail the cash-transfer strategy — which SBU should be harvested/divested to fund the high-growth units?</summary>
+<table>
+<tr><th>SBU</th><th>BCG Quadrant</th><th>Why</th></tr>
+<tr><td>Zenith Fleet</td><td><b>Star ⭐</b></td><td>High share 29%, medium growth +6%</td></tr>
+<tr><td>Zenith E-Volt</td><td><b>Question Mark ❓</b></td><td>Low share 4%, high growth +28%</td></tr>
+<tr><td>Zenith Astra</td><td><b>Cash Cow 🐄</b></td><td>High share 38%, low growth −4%</td></tr>
+<tr><td>Zenith Urban S-1</td><td><b>Dog 🐕</b></td><td>Low share 2%, low growth +1%</td></tr>
+</table>
+<p style="margin-top:8px"><b>Cash strategy:</b> <b>Harvest Zenith Astra</b> — extract the steady cash flow from the mature gasoline line and reallocate it into Zenith E-Volt, funding battery scale and lowering unit costs to convert it into a Star. <b>Divest Zenith Urban S-1</b> — sell/liquidate the loss-making micromobility unit to kill the operating drag and CAC burden, redirecting freed capital to Zenith Fleet. <b>Maintain Zenith Fleet</b> by reinvesting its own reliable B2B revenues.</p>
+</details>
+
+<details>
+<summary>Q4 — GE-McKinsey Matrix Application. Given the scores below, plot each SBU on the 3×3 grid (High/Medium/Low on both axes) and assign one strategic mandate (Invest/Grow, Selective/Hold, or Harvest/Divest).</summary>
+<table>
+<tr><th>SBU</th><th>Industry Attractiveness (Y)</th><th>Business Strength (X)</th></tr>
+<tr><td>Zenith Astra</td><td>2.1 (Low)</td><td>4.2 (High)</td></tr>
+<tr><td>Zenith E-Volt</td><td>4.6 (High)</td><td>2.0 (Low)</td></tr>
+<tr><td>Zenith Fleet</td><td>3.4 (Medium)</td><td>3.8 (High)</td></tr>
+<tr><td>Zenith Urban S-1</td><td>1.8 (Low)</td><td>1.5 (Low)</td></tr>
+</table>
+<p style="margin-top:8px"><b>Zenith Fleet — 🟢 Invest/Grow:</b> strong business strength (3.8) in a medium-attractiveness market (3.4) — invest to expand market leadership.</p>
+<p><b>Zenith E-Volt — 🟡 Selective/Hold:</b> high industry attractiveness (4.6) but low business strength (2.0) — invest selectively in battery tech to close the capability gap before mass production.</p>
+<p><b>Zenith Astra — 🟡 Selective/Hold (Harvest):</b> strong position (4.2) in a low-attractiveness market (2.1) — limit new capex, manage strictly for cash extraction.</p>
+<p><b>Zenith Urban S-1 — 🔴 Harvest/Divest:</b> low strength (1.5) in a low-attractiveness market (1.8) — divest/exit immediately to stop the financial bleed.</p>
+</details>
+
+<p class="ex" style="margin-top:10px">⚡ Note the pattern the professor uses across all 4 frameworks: Astra = mature cash-generator to harvest, E-Volt = high-potential bet to fund selectively, Fleet = the clear winner to invest in, Urban S-1 = the one to cut. Internalize this logic — don't just memorize it — since the midsem will very likely swap in a different company with the same SBU shape.</p>
+</div>
+</section>
+
+<section id="u2-num">
+<h2 class="sec">💯 <span class="tag">Numericals — practice (break-even, GE-McKinsey scoring, SBU revenue)</span></h2>
+<div class="card">
+<details><summary>Q1. A firm sells a product for ₹500. Variable cost per unit is ₹300, and annual fixed costs are ₹10,00,000. Find the break-even quantity.</summary>
+<p>Break-even = Fixed Costs ÷ (Price − Variable Cost) = 10,00,000 ÷ (500 − 300) = 10,00,000 ÷ 200 = <b>5,000 units</b>.</p></details>
+<details><summary>Q2. A company sells 10,000 units at ₹200 each, with variable costs of ₹120/unit and fixed costs of ₹4,00,000. Find the net profit.</summary>
+<p>Contribution/unit = 200 − 120 = ₹80. Total contribution = 10,000 × 80 = 8,00,000. Net Profit = 8,00,000 − 4,00,000 = <b>₹4,00,000</b>.</p></details>
+<details><summary>Q3. A firm's revenue is ₹2,40,000, COGS is 40% of revenue, and fixed costs are ₹30,000. Find the net profit.</summary>
+<p>COGS = 0.40 × 2,40,000 = 96,000. Net Profit = 2,40,000 − 96,000 − 30,000 = <b>₹1,14,000</b>.</p></details>
+<details><summary>Q4. Zenith Motors' annual enterprise revenue is $14.2B, down 6% YoY. Zenith Fleet holds a 15% revenue share. What was Fleet's revenue, and what was total revenue a year ago (before the 6% drop)?</summary>
+<p>Fleet revenue = 15% × 14.2B = <b>$2.13B</b>. Revenue a year ago = 14.2B ÷ (1 − 0.06) = 14.2B ÷ 0.94 ≈ <b>$15.11B</b>.</p></details>
+<details><summary>Q5 (GE-McKinsey weighted scoring). An SBU is scored on Industry Attractiveness using 3 factors: Market Size (weight 0.5, score 4), Growth Rate (weight 0.3, score 5), Regulation (weight 0.2, score 2). Find the final Industry Attractiveness score, and classify it High/Medium/Low (High ≥3.5, Medium 2.5–3.5, Low &lt;2.5).</summary>
+<p>Score = (0.5×4) + (0.3×5) + (0.2×2) = 2.0 + 1.5 + 0.4 = <b>3.9</b> → <b>High</b> attractiveness (matches the method used for Zenith E-Volt's 4.6 score).</p></details>
+<details><summary>Q6. Using Zenith's actual GE-McKinsey scores — Zenith Fleet: Industry Attractiveness 3.4, Business Strength 3.8 — and Zenith Urban S-1: Industry Attractiveness 1.8, Business Strength 1.5 — which SBU sits closer to the "top-right" (Invest/Grow) corner of the grid, and by how much on each axis?</summary>
+<p>Zenith Fleet is closer to top-right on both axes — by 3.4−1.8 = <b>1.6 higher</b> on Industry Attractiveness, and 3.8−1.5 = <b>2.3 higher</b> on Business Strength — consistent with Fleet's Invest/Grow mandate vs Urban S-1's Harvest/Divest.</p></details>
+</div>
+</section>
+
+<p style="text-align:center;color:var(--txt-dim);font-size:12px;margin-top:30px;">Good luck, Priyal — you've got this 🍀</p>
+</main>
+</div>
+
+<script>
+const mcqs = [
+{q:"Which stage of the Strategic Management Model directly precedes 'Implementation'?",opts:["Scanning","Formulation","Evaluation","Budgeting"],a:1},
+{q:"A 'weekend combo offer' running for 2 months is an example of a:",opts:["Policy","Procedure","Program","Tactic"],a:2},
+{q:"Which of Porter's Five Forces is described in class as 'most often overlooked'?",opts:["Buyer Power","Threat of Substitutes","Supplier Power","Rivalry"],a:1},
+{q:"Amul's mission ('fair returns for farmers') is an example of:",opts:["An Objective","A Tactic","A Mission","A Program"],a:2},
+{q:"Reliance's decision to enter telecom (Jio) is an example of which level of strategy?",opts:["Functional","SBU","Corporate","Operational"],a:2},
+{q:"In SWOT, 'a new hostel opening nearby' for a momo cart would be classified as:",opts:["Strength","Weakness","Opportunity","Threat"],a:2},
+{q:"Which forecasting method involves assuming a long-held pattern continues?",opts:["Scenario thinking","Expert judgment","Trend extrapolation","SWOT mapping"],a:2},
+{q:"Nokia's decline is primarily used in class to illustrate a failure of:",opts:["Budgeting","Environmental scanning","Procedure-writing","Tactic execution"],a:1},
+{q:"'Schwerpunkt' as used in class refers to:",opts:["A pricing tactic","An organization's focal point / Achilles heel","A type of program","A forecasting method"],a:1},
+{q:"SWOT differs from Five Forces mainly because SWOT:",opts:["Is purely external/structural","Looks at one specific business, mixing internal+external","Only applies to large conglomerates","Ignores weaknesses"],a:1},
+{q:"In VRIO, a resource that is Valuable and Rare but easy to imitate gives the firm:",opts:["Sustained competitive advantage","Competitive disadvantage","Temporary competitive advantage","Competitive parity"],a:2},
+{q:"Honda's small-engine design, used across bikes, cars and generators, is best described as:",opts:["A tangible resource","A core competence","A support activity","A generic strategy"],a:1},
+{q:"'Inbound Logistics, Operations, Outbound Logistics, Marketing & Sales, Service' are the:",opts:["Four VRIO tests","Primary activities of the Value Chain","PESTLE factors","Grand strategy alternatives"],a:1},
+{q:"A firm has a Valuable, Rare, Inimitable resource but isn't structured to exploit it. Per VRIO, this results in:",opts:["Sustained advantage","Unused competitive advantage","Competitive disadvantage","Cost leadership"],a:1},
+];
+const mcqs2 = [
+{q:"Strategy Formulation differs from Strategy Implementation mainly because Formulation is about:",opts:["Executing the plan","Allocating budgets","Deciding WHAT to do","Managing day-to-day operations"],a:2},
+{q:"In the Strategic Formulation Process, which step comes right after 'Generate Strategic Alternatives'?",opts:["Revisit Objectives","Evaluate Alternatives","Prepare for Implementation","Environmental Analysis"],a:1},
+{q:"A firm shrinking/exiting a losing business line is pursuing which Grand Strategy?",opts:["Growth","Stability","Retrenchment","Combination"],a:2},
+{q:"In the TOWS Matrix, using Strengths to neutralise Threats is the:",opts:["SO strategy","WO strategy","ST strategy","WT strategy"],a:2},
+{q:"Maggi adding oats noodles for its existing customer base is an example of, on the Ansoff Matrix:",opts:["Market Penetration","Product Development","Market Development","Diversification"],a:1},
+{q:"On the Ansoff Matrix, which quadrant carries the highest risk?",opts:["Market Penetration","Market Development","Product Development","Diversification"],a:3},
+{q:"Nike expanding from shoes into apparel via the same retail channels is an example of:",opts:["Unrelated diversification","Related diversification","Market penetration","Retrenchment"],a:1},
+{q:"On the BCG Matrix, a high-market-share SBU in a low-growth market is a:",opts:["Star","Question Mark","Cash Cow","Dog"],a:2},
+{q:"The GE-McKinsey Matrix improves on BCG mainly by using:",opts:["Three axes instead of two","Composite, weighted scores instead of two raw numbers","Only qualitative judgment, no numbers","A 2×2 grid instead of 3×3"],a:1},
+{q:"In the Product Life Cycle, the Decline stage typically maps to which BCG quadrant?",opts:["Star","Question Mark","Cash Cow","Dog"],a:3},
+{q:"In the Zenith Motors case, Zenith Astra (38% share, -4% growth) is correctly classified as a:",opts:["Star","Question Mark","Cash Cow","Dog"],a:2},
+{q:"The TOWS Matrix was developed by:",opts:["Igor Ansoff","Michael Porter","Heinz Weihrich","Boston Consulting Group"],a:2},
+];
+function renderMCQs(list, hostId){
+  const host=document.getElementById(hostId);
+  list.forEach((m,i)=>{
+    const div=document.createElement('div'); div.className='mcq';
+    const p=document.createElement('p'); p.textContent=(i+1)+". "+m.q; div.appendChild(p);
+    m.opts.forEach((o,oi)=>{
+      const b=document.createElement('button'); b.className='opt'; b.textContent=o;
+      b.onclick=()=>{
+        if(b.dataset.done) return;
+        const buttons=div.querySelectorAll('.opt');
+        buttons.forEach((bb,bi)=>{bb.dataset.done='1'; if(bi===m.a) bb.classList.add('correct');});
+        if(oi!==m.a) b.classList.add('wrong');
+        total++; if(oi===m.a) got++;
+        document.getElementById('score').textContent='Score: '+got+'/'+total;
+      };
+      div.appendChild(b);
+    });
+    host.appendChild(div);
+  });
+}
+let total=0, got=0;
+renderMCQs(mcqs, 'mcqhost');
+renderMCQs(mcqs2, 'mcqhost2');
+// scroll spy
+const links=[...document.querySelectorAll('#sidenav a')];
+const secs=links.map(l=>document.querySelector(l.getAttribute('href')));
+window.addEventListener('scroll',()=>{
+  let idx=0;
+  secs.forEach((s,i)=>{ if(s && s.getBoundingClientRect().top<120) idx=i; });
+  links.forEach(l=>l.classList.remove('active'));
+  if(links[idx]) links[idx].classList.add('active');
+});
+</script>
+</body>
+</html>
