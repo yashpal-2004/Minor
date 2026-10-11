@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashcard Builder & Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .flashcard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .flashcard-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .flashcard-header h1 {
+    font-size: 32px;
+    color: var(--accent);
+    margin: 0 0 8px;
+    font-family: 'Segoe Print', cursive, sans-serif;
+  }
+
+  .flashcard-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--card-b);
+    padding-bottom: 12px;
+  }
+
+  .tab-btn {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: var(--txt-dim);
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Segoe Print', cursive, sans-serif;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+  }
+
+  .tab-btn:hover {
+    color: var(--accent);
+  }
+
+  .tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  /* Builder Styles */
+  .builder-form {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--card-b);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--accent);
+    font-family: 'Segoe Print', cursive, sans-serif;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid var(--card-b);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--txt);
+    background: rgba(255, 255, 255, 0.9);
+    transition: 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(120, 81, 169, 0.1);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Segoe Print', cursive, sans-serif;
+    transition: all 0.3s;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(120, 81, 169, 0.3);
+  }
+
+  .btn-secondary {
+    background: rgba(120, 81, 169, 0.15);
+    color: var(--accent);
+    border: 2px solid var(--accent);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(120, 81, 169, 0.25);
+  }
+
+  .btn-danger {
+    background: rgba(199, 79, 95, 0.15);
+    color: var(--bad);
+    border: 2px solid var(--bad);
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .btn-danger:hover {
+    background: rgba(199, 79, 95, 0.25);
+  }
+
+  /* Flashcard Display */
+  .flashcard {
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 0 auto 24px;
+    max-width: 600px;
+    height: 300px;
+  }
+
+  .flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flashcard-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 2px solid var(--card-b);
+    padding: 24px;
+    text-align: center;
+  }
+
+  .flashcard-front {
+    background: linear-gradient(135deg, rgba(120, 81, 169, 0.1), rgba(212, 102, 63, 0.1));
+  }
+
+  .flashcard-back {
+    background: linear-gradient(135deg, rgba(95, 168, 87, 0.1), rgba(120, 81, 169, 0.1));
+    transform: rotateY(180deg);
+  }
+
+  .flashcard-face h3 {
+    margin: 0 0 12px;
+    color: var(--txt-dim);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+  }
+
+  .flashcard-face p {
+    margin: 0;
+    font-size: 18px;
+    color: var(--txt);
+    line-height: 1.6;
+    font-family: 'Segoe Print', cursive, sans-serif;
+    font-weight: 500;
+  }
+
+  .flashcard-hint {
+    font-size: 12px;
+    color: var(--txt-dim);
+    margin-top: 12px;
+    font-style: italic;
+  }
+
+  /* Quiz Mode */
+  .quiz-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .stat-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--card-b);
+    border-radius: 12px;
+    padding: 16px 24px;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .stat-card .label {
+    font-size: 12px;
+    color: var(--txt-dim);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .stat-card .value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .quiz-controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 24px 0;
+    flex-wrap: wrap;
+  }
+
+  .btn-result {
+    padding: 8px 16px;
+    font-size: 13px;
+    min-width: 100px;
+  }
+
+  .btn-correct {
+    background: rgba(95, 168, 87, 0.15);
+    color: var(--good);
+    border: 2px solid var(--good);
+  }
+
+  .btn-correct:hover {
+    background: rgba(95, 168, 87, 0.25);
+  }
+
+  .btn-incorrect {
+    background: rgba(199, 79, 95, 0.15);
+    color: var(--bad);
+    border: 2px solid var(--bad);
+  }
+
+  .btn-incorrect:hover {
+    background: rgba(199, 79, 95, 0.25);
+  }
+
+  .btn-skip {
+    background: rgba(200, 157, 58, 0.15);
+    color: var(--warn);
+    border: 2px solid var(--warn);
+  }
+
+  .btn-skip:hover {
+    background: rgba(200, 157, 58, 0.25);
+  }
+
+  /* Deck List */
+  .deck-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .deck-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--card-b);
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .deck-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(120, 81, 169, 0.15);
+  }
+
+  .deck-card h3 {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-size: 16px;
+    font-family: 'Segoe Print', cursive, sans-serif;
+  }
+
+  .deck-card p {
+    margin: 0 0 12px;
+    color: var(--txt-dim);
+    font-size: 13px;
+  }
+
+  .deck-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--txt-dim);
+    margin-bottom: 12px;
+  }
+
+  .deck-actions {
+    display: flex;
+    gap: 6px;
+  }
+
+  .deck-actions button {
+    flex: 1;
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--txt-dim);
+  }
+
+  .empty-state p {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+  /* Navigation */
+  .flashcard-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 12px;
+  }
+
+  .progress-bar {
+    flex: 1;
+    height: 6px;
+    background: var(--card-b);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.3s;
+  }
+
+  .progress-text {
+    font-size: 12px;
+    color: var(--txt-dim);
+    min-width: 60px;
+    text-align: right;
+  }
+
+  @media (max-width: 600px) {
+    .flashcard {
+      height: 200px;
+    }
+
+    .flashcard-face p {
+      font-size: 16px;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .flashcard-tabs {
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+  }
+
+  @media print {
+    .flashcard-tabs,
+    .builder-form,
+    .quiz-controls,
+    .flashcard-nav {
+      display: none;
+    }
+
+    .flashcard {
+      page-break-after: always;
+      border: 1px solid #ccc;
+      height: auto;
+      min-height: 200px;
+    }
+
+    .flashcard-inner {
+      transform: none !important;
+    }
+
+    .flashcard-back {
+      position: static;
+      transform: none !important;
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="flashcard-container">
+  <div class="flashcard-header">
+    <h1>📚 Flashcard Builder & Quiz</h1>
+    <p style="color: var(--txt-dim); margin: 0; font-family: 'Segoe Print', cursive;">Master key concepts with interactive flashcards</p>
+  </div>
+
+  <div class="flashcard-tabs">
+    <button class="tab-btn active" onclick="switchTab('library')">📚 My Decks</button>
+    <button class="tab-btn" onclick="switchTab('builder')">✏️ Create Cards</button>
+    <button class="tab-btn" onclick="switchTab('study')">🎯 Study Mode</button>
+    <button class="tab-btn" onclick="switchTab('quiz')">📊 Quiz Mode</button>
+  </div>
+
+  <!-- Library Tab -->
+  <div id="library" class="tab-content active">
+    <div class="deck-list" id="deckList"></div>
+  </div>
+
+  <!-- Builder Tab -->
+  <div id="builder" class="tab-content">
+    <div class="builder-form">
+      <h2 style="color: var(--accent); margin-top: 0; font-family: 'Segoe Print', cursive;">Create New Flashcard</h2>
+      
+      <div class="form-group">
+        <label>Select Deck or Create New</label>
+        <div style="display: flex; gap: 8px;">
+          <select id="deckSelect" style="flex: 1;">
+            <option value="">-- Select or Create New --</option>
+          </select>
+          <input type="text" id="newDeckName" placeholder="New deck name..." style="flex: 1;">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Front (Term/Question)</label>
+        <textarea id="cardFront" placeholder="Enter the term or question..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Back (Definition/Answer)</label>
+        <textarea id="cardBack" placeholder="Enter the definition or answer..."></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Subject (optional)</label>
+          <input type="text" id="cardSubject" placeholder="e.g., CGE, SBG, Finance">
+        </div>
+        <div class="form-group">
+          <label>Difficulty</label>
+          <select id="cardDifficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px;">
+        <button class="btn btn-primary" onclick="addCard()">Add Card</button>
+        <button class="btn btn-secondary" onclick="resetForm()">Clear Form</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Study Mode Tab -->
+  <div id="study" class="tab-content">
+    <div id="studyContent">
+      <div class="empty-state">
+        <p>Select a deck from "My Decks" to start studying</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quiz Mode Tab -->
+  <div id="quiz" class="tab-content">
+    <div id="quizContent">
+      <div class="empty-state">
+        <p>Select a deck from "My Decks" to start quiz mode</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="flashcards.js"></script>
+</body>
+</html>
